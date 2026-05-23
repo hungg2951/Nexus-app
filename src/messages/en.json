@@ -1,0 +1,43 @@
+{
+  "Nav": {
+    "feed": "Feed",
+    "explore": "Explore",
+    "notifications": "Notifications",
+    "messages": "Messages",
+    "bookmarks": "Bookmarks",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "FeedHeader": {
+    "title": "Feed",
+    "tabs": {
+      "forYou": "For You",
+      "following": "Following",
+      "trending": "Trending"
+    },
+    "search": "Search",
+    "settings": "Settings"
+  },
+  "Compose": {
+    "placeholder": "What's on your mind?",
+    "post": "Post"
+  },
+  "PostCard": {
+    "postedBy": "Post by {name}"
+  },
+  "RightSidebar": {
+    "toggleDark": "Toggle dark mode",
+    "trending": "Trending",
+    "posts": "{count} posts",
+    "suggestions": "Who to follow",
+    "follow": "Follow",
+    "following": "Following"
+  },
+  "MobileNav": {
+    "feed": "Feed",
+    "explore": "Explore",
+    "createPost": "Create post",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  }
+}

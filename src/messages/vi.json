@@ -1,0 +1,43 @@
+{
+  "Nav": {
+    "feed": "Feed",
+    "explore": "Khám phá",
+    "notifications": "Thông báo",
+    "messages": "Tin nhắn",
+    "bookmarks": "Đã lưu",
+    "profile": "Trang cá nhân",
+    "settings": "Cài đặt"
+  },
+  "FeedHeader": {
+    "title": "Feed",
+    "tabs": {
+      "forYou": "Dành cho bạn",
+      "following": "Đang theo dõi",
+      "trending": "Nổi bật"
+    },
+    "search": "Tìm kiếm",
+    "settings": "Cài đặt"
+  },
+  "Compose": {
+    "placeholder": "Bạn đang nghĩ gì?",
+    "post": "Đăng"
+  },
+  "PostCard": {
+    "postedBy": "Bài viết của {name}"
+  },
+  "RightSidebar": {
+    "toggleDark": "Chuyển chế độ tối",
+    "trending": "Trending",
+    "posts": "{count} bài viết",
+    "suggestions": "Gợi ý theo dõi",
+    "follow": "Theo dõi",
+    "following": "Đang theo dõi"
+  },
+  "MobileNav": {
+    "feed": "Feed",
+    "explore": "Khám phá",
+    "createPost": "Tạo bài viết",
+    "notifications": "Thông báo",
+    "profile": "Trang cá nhân"
+  }
+}
