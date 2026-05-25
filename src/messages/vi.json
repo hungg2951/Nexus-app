@@ -39,5 +39,70 @@
     "createPost": "Tạo bài viết",
     "notifications": "Thông báo",
     "profile": "Trang cá nhân"
+  },
+  "Register": {
+    "nav": {
+      "about": "Về chúng tôi",
+      "login": "Đăng nhập"
+    },
+    "brand": {
+      "tagline": "Nexus giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn."
+    },
+    "form": {
+      "title": "Tạo tài khoản mới",
+      "subtitle": "Nhanh chóng và dễ dàng.",
+      "lastName": "Họ",
+      "firstName": "Tên",
+      "emailOrPhone": "Số di động hoặc email",
+      "newPassword": "Mật khẩu mới",
+      "birthday": "Ngày sinh",
+      "birthdayHelp": "Tại sao tôi cần cung cấp ngày sinh?",
+      "day": "Ngày",
+      "month": "Tháng",
+      "year": "Năm",
+      "months": {
+        "1": "Tháng 1",
+        "2": "Tháng 2",
+        "3": "Tháng 3",
+        "4": "Tháng 4",
+        "5": "Tháng 5",
+        "6": "Tháng 6",
+        "7": "Tháng 7",
+        "8": "Tháng 8",
+        "9": "Tháng 9",
+        "10": "Tháng 10",
+        "11": "Tháng 11",
+        "12": "Tháng 12"
+      },
+      "gender": "Giới tính",
+      "genderHelp": "Bạn có thể thay đổi thông tin này sau",
+      "genders": {
+        "female": "Nữ",
+        "male": "Nam",
+        "other": "Khác"
+      },
+      "terms": "Bằng cách nhấp vào Đăng ký, bạn đồng ý với <termsLink>Điều khoản</termsLink>, <privacyLink>Chính sách quyền riêng tư</privacyLink> và <cookieLink>Chính sách cookie</cookieLink> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.",
+      "submit": "Đăng ký",
+      "alreadyHaveAccount": "Bạn đã có tài khoản?"
+    },
+    "createPage": {
+      "cta": "Tạo Trang",
+      "description": "dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp."
+    },
+    "footer": {
+      "links": {
+        "register": "Đăng ký",
+        "login": "Đăng nhập",
+        "messenger": "Messenger",
+        "lite": "Nexus Lite",
+        "video": "Video",
+        "places": "Địa điểm",
+        "games": "Trò chơi",
+        "marketplace": "Marketplace",
+        "pay": "Nexus Pay",
+        "store": "Meta Store"
+      },
+      "copyright": "Nexus © {year}"
+    }
   }
 }

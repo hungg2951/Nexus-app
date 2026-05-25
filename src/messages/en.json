@@ -39,5 +39,70 @@
     "createPost": "Create post",
     "notifications": "Notifications",
     "profile": "Profile"
+  },
+  "Register": {
+    "nav": {
+      "about": "About us",
+      "login": "Log in"
+    },
+    "brand": {
+      "tagline": "Nexus helps you connect and share with the people in your life."
+    },
+    "form": {
+      "title": "Create a new account",
+      "subtitle": "It's quick and easy.",
+      "lastName": "Last name",
+      "firstName": "First name",
+      "emailOrPhone": "Mobile number or email",
+      "newPassword": "New password",
+      "birthday": "Date of birth",
+      "birthdayHelp": "Why do I need to provide my date of birth?",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "May",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Aug",
+        "9": "Sep",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec"
+      },
+      "gender": "Gender",
+      "genderHelp": "You can change who can see this later",
+      "genders": {
+        "female": "Female",
+        "male": "Male",
+        "other": "Custom"
+      },
+      "terms": "By clicking Sign Up, you agree to our <termsLink>Terms</termsLink>, <privacyLink>Privacy Policy</privacyLink> and <cookieLink>Cookies Policy</cookieLink>. You may receive SMS notifications from us and can opt out at any time.",
+      "submit": "Sign up",
+      "alreadyHaveAccount": "Already have an account?"
+    },
+    "createPage": {
+      "cta": "Create a Page",
+      "description": "for a celebrity, brand or business."
+    },
+    "footer": {
+      "links": {
+        "register": "Sign up",
+        "login": "Log in",
+        "messenger": "Messenger",
+        "lite": "Nexus Lite",
+        "video": "Video",
+        "places": "Places",
+        "games": "Games",
+        "marketplace": "Marketplace",
+        "pay": "Nexus Pay",
+        "store": "Meta Store"
+      },
+      "copyright": "Nexus © {year}"
+    }
   }
 }

@@ -11,6 +11,7 @@ import {
   UserIcon,
   GearIcon,
 } from "@/components/icons";
+import Logo from "../logo/Logo";
 
 // ─── Left Sidebar ─────────────────────────────────────────────────────────────
 
@@ -22,12 +23,13 @@ const LeftSidebar: FC = () => {
       <div>
         {/* Logo */}
         <div className="flex items-center gap-2 mb-10 px-2 justify-center lg:justify-start">
-          <div className="w-8 h-8 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+          {/* <div className="w-8 h-8 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
             <div className="w-2 h-2 bg-white rounded-full" />
           </div>
           <h1 className="text-2xl font-bold tracking-tight hidden lg:block">
             Nexus
-          </h1>
+          </h1> */}
+          <Logo/>
         </div>
         {/* Nav */}
         <nav className="space-y-1">
