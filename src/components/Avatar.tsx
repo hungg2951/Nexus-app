@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import type { AvatarProps, AvatarSize } from "@/types";
+import Image from "next/image";
 
 // ─── Avatar ───────────────────────────────────────────────────────────────────
 
@@ -11,14 +12,21 @@ const AVATAR_SIZES: Record<AvatarSize, string> = {
 
 const Avatar: FC<AvatarProps> = ({
   initials,
-  color = "bg-violet-600",
+  avatarUrl,
+  color = "bg-primary",
   size = "md",
-}) => (
-  <div
-    className={`${AVATAR_SIZES[size]} ${color} rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold`}
-  >
-    {initials}
-  </div>
-);
+}) => {
+  return (
+    <div
+      className={`${AVATAR_SIZES[size]} ${color} rounded-full flex-shrink-0 overflow-hidden flex items-center justify-center text-white font-bold`}
+    >
+      {avatarUrl ? (
+        <Image src={avatarUrl} alt={initials} fill className="object-cover" />
+      ) : (
+        initials
+      )}
+    </div>
+  );
+};
 
 export default Avatar;

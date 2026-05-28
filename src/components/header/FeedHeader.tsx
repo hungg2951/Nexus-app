@@ -20,7 +20,7 @@ const FeedHeader: FC<FeedHeaderProps> = ({ activeTab, onTabChange }) => {
       <div className="px-4 lg:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           {/* Mobile logo */}
-          <div className="md:hidden w-8 h-8 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+          <div className="md:hidden w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
             <div className="w-2 h-2 bg-white rounded-full" />
           </div>
           <h2 className="text-xl font-bold">{t("title")}</h2>
@@ -50,7 +50,7 @@ const FeedHeader: FC<FeedHeaderProps> = ({ activeTab, onTabChange }) => {
             onClick={() => onTabChange(i)}
             className={`flex-1 py-3 text-sm font-medium transition-colors cursor-pointer ${
               activeTab === i
-                ? "text-violet-600 border-b-2 border-violet-600"
+                ? "text-primary border-b-2 border-primary"
                 : "text-gray-500 hover:bg-gray-50 border-b-2 border-transparent"
             }`}
           >

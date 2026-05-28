@@ -83,7 +83,15 @@
       },
       "terms": "Bằng cách nhấp vào Đăng ký, bạn đồng ý với <termsLink>Điều khoản</termsLink>, <privacyLink>Chính sách quyền riêng tư</privacyLink> và <cookieLink>Chính sách cookie</cookieLink> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.",
       "submit": "Đăng ký",
-      "alreadyHaveAccount": "Bạn đã có tài khoản?"
+      "alreadyHaveAccount": "Bạn đã có tài khoản?",
+      "errors": {
+        "lastNameRequired": "Vui lòng nhập họ",
+        "firstNameRequired": "Vui lòng nhập tên",
+        "identifierRequired": "Vui lòng nhập email hoặc số điện thoại",
+        "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự",
+        "birthdayRequired": "Vui lòng chọn ngày sinh",
+        "genderRequired": "Vui lòng chọn giới tính"
+      }
     },
     "createPage": {
       "cta": "Tạo Trang",
@@ -103,6 +111,34 @@
         "store": "Meta Store"
       },
       "copyright": "Nexus © {year}"
+    }
+  },
+  "Login": {
+    "form": {
+      "title": "Đăng nhập",
+      "subtitle": "Chào mừng trở lại! Vui lòng nhập thông tin của bạn.",
+      "emailOrPhone": "Email hoặc số điện thoại",
+      "password": "Mật khẩu",
+      "forgotPassword": "Quên mật khẩu?",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "or": "hoặc",
+      "noAccount": "Chưa có tài khoản?",
+      "register": "Đăng ký ngay",
+      "errors": {
+        "identifierRequired": "Vui lòng nhập email hoặc số điện thoại",
+        "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự"
+      },
+      "apiErrors": {
+        "AUTH_EMAIL_EXISTED": "Email này đã được sử dụng",
+        "AUTH_PHONE_EXISTED": "Số điện thoại này đã được sử dụng",
+        "AUTH_INVALID_CREDENTIALS": "Email/SĐT hoặc mật khẩu không đúng",
+        "AUTH_ACCOUNT_LOCKED": "Tài khoản của bạn đã bị khoá",
+        "AUTH_TOKEN_EXPIRED": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
+        "VALIDATION_ERROR": "Vui lòng điền đầy đủ thông tin",
+        "SERVER_ERROR": "Có lỗi xảy ra, vui lòng thử lại"
+      },
+      "registerSuccess": "Đăng ký thành công!"
     }
   }
 }

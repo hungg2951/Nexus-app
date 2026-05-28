@@ -83,7 +83,15 @@
       },
       "terms": "By clicking Sign Up, you agree to our <termsLink>Terms</termsLink>, <privacyLink>Privacy Policy</privacyLink> and <cookieLink>Cookies Policy</cookieLink>. You may receive SMS notifications from us and can opt out at any time.",
       "submit": "Sign up",
-      "alreadyHaveAccount": "Already have an account?"
+      "alreadyHaveAccount": "Already have an account?",
+      "errors": {
+        "lastNameRequired": "Please enter your last name",
+        "firstNameRequired": "Please enter your first name",
+        "identifierRequired": "Please enter your email or phone number",
+        "passwordMin": "Password must be at least 6 characters",
+        "birthdayRequired": "Please select your date of birth",
+        "genderRequired": "Please select your gender"
+      }
     },
     "createPage": {
       "cta": "Create a Page",
@@ -103,6 +111,34 @@
         "store": "Meta Store"
       },
       "copyright": "Nexus © {year}"
+    }
+  },
+  "Login": {
+    "form": {
+      "title": "Log in",
+      "subtitle": "Welcome back! Please enter your details.",
+      "emailOrPhone": "Email or phone number",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Log in",
+      "submitting": "Logging in...",
+      "or": "or",
+      "noAccount": "Don't have an account?",
+      "register": "Register now",
+      "errors": {
+        "identifierRequired": "Please enter your email or phone number",
+        "passwordMin": "Password must be at least 6 characters"
+      },
+      "apiErrors": {
+        "AUTH_EMAIL_EXISTED": "This email is already in use",
+        "AUTH_PHONE_EXISTED": "This phone number is already in use",
+        "AUTH_INVALID_CREDENTIALS": "Invalid email/phone or password",
+        "AUTH_ACCOUNT_LOCKED": "Your account has been locked",
+        "AUTH_TOKEN_EXPIRED": "Your session has expired, please log in again",
+        "VALIDATION_ERROR": "Please fill in all required fields",
+        "SERVER_ERROR": "Something went wrong, please try again"
+      },
+      "registerSuccess": "Registration successful!"
     }
   }
 }

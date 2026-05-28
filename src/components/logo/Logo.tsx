@@ -10,8 +10,7 @@ export default function Logo({ href = "/", fontSize = 32 }: LogoProps) {
   return (
     <Link
       href={href}
-      className="flex items-center gap-2 no-underline"
-      style={{ color: "#4648d4" }}
+      className="flex items-center gap-2 no-underline text-primary"
     >
       <HubIcon
         style={{

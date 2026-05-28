@@ -5,6 +5,43 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  /* ── Primary ── */
+  --color-primary: #4648d4;
+  --color-primary-hover: #3a3bb8;
+  --color-primary-light: #f1f3ff;
+  --color-primary-foreground: #ffffff;
+
+  /* ── Secondary (tím nhạt hơn) ── */
+  --color-secondary: #7c7ef0;
+  --color-secondary-hover: #6668e8;
+  --color-secondary-foreground: #ffffff;
+
+  /* ── Accent (indigo ấm) ── */
+  --color-accent: #e8e9fc;
+  --color-accent-foreground: #4648d4;
+
+  /* ── Neutral ── */
+  --color-background: #ffffff;
+  --color-foreground: #141b2b;
+  --color-muted: #464554;
+  --color-muted-light: #9896a8;
+  --color-border: #c7c4d7;
+  --color-border-light: #e8e7f0;
+
+  /* ── Status ── */
+  --color-success: #22c55e;
+  --color-success-light: #f0fdf4;
+  --color-error: #ef4444;
+  --color-error-light: #fef2f2;
+  --color-warning: #f59e0b;
+  --color-warning-light: #fffbeb;
+
+  /* ── Surface ── */
+  --color-surface: #fafafa;
+  --color-surface-hover: #f4f4fd;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

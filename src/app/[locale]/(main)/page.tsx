@@ -17,6 +17,7 @@ import {
   ListBulletIcon,
   CalendarIcon,
 } from "@/components/icons";
+import { useAuthStore } from "@/lib/store/auth.store";
 
 // ─── Static Data ──────────────────────────────────────────────────────────────
 
@@ -66,6 +67,12 @@ const HomePage: FC = () => {
   const [postText, setPostText] = useState<string>("");
   const t = useTranslations("Compose");
 
+  const { user } = useAuthStore();
+
+  const initials = `${user?.firstName?.[0] || ""}${
+    user?.lastName?.[0] || ""
+  }`.toUpperCase();
+
   return (
     <div className="max-w-[1440px] mx-auto flex min-h-screen bg-white text-gray-900 font-sans antialiased pb-16 md:pb-0">
       {/* Left Sidebar */}
@@ -79,12 +86,15 @@ const HomePage: FC = () => {
         {/* Post Compose Box */}
         <section className="p-4 lg:p-6 border-b border-gray-100">
           <div className="flex gap-4">
-            <Avatar initials="NT" color="bg-violet-600" size="lg" />
+            <Avatar
+              initials={initials || "Unknown"}
+              size="lg"
+            />
             <div className="flex-1">
               <textarea
                 value={postText}
                 onChange={(e) => setPostText(e.target.value)}
-                className="w-full border border-gray-200 rounded-xl p-3 lg:p-4 resize-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-400 text-sm lg:text-base outline-none transition-all placeholder:text-gray-400"
+                className="w-full border border-gray-200 rounded-xl p-3 lg:p-4 resize-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm lg:text-base outline-none transition-all placeholder:text-gray-400"
                 placeholder={t("placeholder")}
                 rows={3}
               />
@@ -93,7 +103,7 @@ const HomePage: FC = () => {
                   {COMPOSE_ICONS.map((Icon, i) => (
                     <button
                       key={i}
-                      className="hover:text-violet-600 transition-colors p-1"
+                      className="hover:text-pribg-primary transition-colors p-1"
                     >
                       <Icon />
                     </button>
@@ -102,7 +112,7 @@ const HomePage: FC = () => {
                 <button
                   className={`px-6 py-2 rounded-xl font-semibold text-sm transition-all active:scale-95 ${
                     postText.trim()
-                      ? "bg-violet-600 text-white hover:bg-violet-700 shadow-sm shadow-violet-200"
+                      ? "bg-primary text-white hover:bg-primary shadow-sm shadow-violet-200"
                       : "bg-gray-100 text-gray-400 cursor-not-allowed"
                   }`}
                   disabled={!postText.trim()}
@@ -132,4 +142,3 @@ const HomePage: FC = () => {
 };
 
 export default HomePage;
-

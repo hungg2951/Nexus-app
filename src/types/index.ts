@@ -4,6 +4,7 @@ export type AvatarSize = "sm" | "md" | "lg";
 
 export interface AvatarProps {
   initials: string;
+  avatarUrl?: string | null;
   color?: string;
   size?: AvatarSize;
 }
