@@ -136,9 +136,12 @@
         "AUTH_ACCOUNT_LOCKED": "Tài khoản của bạn đã bị khoá",
         "AUTH_TOKEN_EXPIRED": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
         "VALIDATION_ERROR": "Vui lòng điền đầy đủ thông tin",
-        "SERVER_ERROR": "Có lỗi xảy ra, vui lòng thử lại"
+        "SERVER_ERROR": "Có lỗi xảy ra, vui lòng thử lại",
+        "ERR_NETWORK" : "Có lỗi xảy ra, vui lòng thử lại",
+        "AUTH_EMAIL_NOT_VERIFIED": "Tài khoản chưa được xác thực, vui lòng kiểm tra email"
       },
-      "registerSuccess": "Đăng ký thành công!"
+      "registerSuccess": "Đăng ký thành công!",
+      "loginSuccess": "Đăng nhập thành công!"
     }
   }
 }

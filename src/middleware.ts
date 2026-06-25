@@ -1,14 +1,15 @@
-// middleware.ts
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { NextRequest, NextResponse } from "next/server";
 
 const handleI18n = createMiddleware(routing);
 
-// Các route không cần đăng nhập
 const publicRoutes = [
   "/login",
   "/register",
+  "/verify-email",
+  "/forgot-password",
+  "/reset-password",
   "/about",
   "/terms",
   "/privacy",
@@ -19,24 +20,31 @@ export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const refreshToken = request.cookies.get("refreshToken")?.value;
 
-  // Bỏ qua locale prefix (/en/login → /login)
+  // Bỏ locale prefix /en/ hoặc /vi/ khỏi pathname
   const pathnameWithoutLocale = pathname.replace(/^\/(en|vi)/, "") || "/";
 
-  const isPublicRoute = publicRoutes.some((route) =>
-    pathnameWithoutLocale.startsWith(route),
-  );
-  const isAuthRoute = ["/login", "/register"].some((route) =>
-    pathnameWithoutLocale.startsWith(route),
+  const isPublicRoute = publicRoutes.some(
+    (route) =>
+      pathnameWithoutLocale === route ||
+      pathnameWithoutLocale.startsWith(route + "/"),
   );
 
-  // Có token mà vào login/register → redirect /
-  if (refreshToken && isAuthRoute) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
+  const isAuthRoute = ["/login", "/register"].some(
+    (route) =>
+      pathnameWithoutLocale === route ||
+      pathnameWithoutLocale.startsWith(route + "/"),
+  );
 
   // Không có token mà vào route cần đăng nhập → redirect /login
   if (!refreshToken && !isPublicRoute) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    const locale = request.cookies.get("NEXT_LOCALE")?.value || "vi";
+    return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+  }
+
+  // Có token mà vào login/register → redirect /
+  if (refreshToken && isAuthRoute) {
+    const locale = request.cookies.get("NEXT_LOCALE")?.value || "vi";
+    return NextResponse.redirect(new URL(`/${locale}`, request.url));
   }
 
   // Set locale mặc định

@@ -136,9 +136,12 @@
         "AUTH_ACCOUNT_LOCKED": "Your account has been locked",
         "AUTH_TOKEN_EXPIRED": "Your session has expired, please log in again",
         "VALIDATION_ERROR": "Please fill in all required fields",
-        "SERVER_ERROR": "Something went wrong, please try again"
+        "SERVER_ERROR": "Something went wrong, please try again",
+        "ERR_NETWORK": "Something went wrong, please try again",
+        "AUTH_EMAIL_NOT_VERIFIED": "Account not verified, please check your email"
       },
-      "registerSuccess": "Registration successful!"
+      "registerSuccess": "Registration successful!",
+      "loginSuccess": "Login successful!"
     }
   }
 }
