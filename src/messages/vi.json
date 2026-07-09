@@ -83,6 +83,7 @@
       },
       "terms": "Bằng cách nhấp vào Đăng ký, bạn đồng ý với <termsLink>Điều khoản</termsLink>, <privacyLink>Chính sách quyền riêng tư</privacyLink> và <cookieLink>Chính sách cookie</cookieLink> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.",
       "submit": "Đăng ký",
+      "submitting": "Đang tạo tài khoản...",
       "alreadyHaveAccount": "Bạn đã có tài khoản?",
       "errors": {
         "lastNameRequired": "Vui lòng nhập họ",
@@ -143,5 +144,160 @@
       "registerSuccess": "Đăng ký thành công!",
       "loginSuccess": "Đăng nhập thành công!"
     }
+  },
+  "Explore": {
+    "title": "Khám phá",
+    "searchPlaceholder": "Tìm kiếm Nexus",
+    "trending": "Chủ đề nổi bật",
+    "trendingSubtitle": "Những gì đang xảy ra ngay bây giờ",
+    "suggestedUsers": "Có thể bạn quen",
+    "suggestedSubtitle": "Dựa trên hoạt động của bạn",
+    "follow": "Theo dõi",
+    "following": "Đang theo dõi",
+    "posts": "{count} bài viết",
+    "explorePosts": "Khám phá bài viết",
+    "tabs": {
+      "forYou": "Dành cho bạn",
+      "trending": "Nổi bật",
+      "people": "Mọi người",
+      "media": "Media"
+    }
+  },
+  "Notifications": {
+    "title": "Thông báo",
+    "tabs": {
+      "all": "Tất cả",
+      "mentions": "Đề cập",
+      "likes": "Lượt thích"
+    },
+    "empty": {
+      "title": "Chưa có thông báo",
+      "subtitle": "Khi có người tương tác với bài viết của bạn, bạn sẽ thấy ở đây."
+    },
+    "markAllRead": "Đánh dấu tất cả đã đọc",
+    "types": {
+      "like": "đã thích bài viết của bạn",
+      "comment": "đã bình luận bài viết của bạn",
+      "follow": "đã bắt đầu theo dõi bạn",
+      "share": "đã chia sẻ bài viết của bạn",
+      "mention": "đã đề cập đến bạn trong một bài viết"
+    }
+  },
+  "Messages": {
+    "title": "Tin nhắn",
+    "newMessage": "Tin nhắn mới",
+    "searchConversations": "Tìm cuộc trò chuyện",
+    "online": "Đang hoạt động",
+    "offline": "Ngoại tuyến",
+    "you": "Bạn",
+    "typingPlaceholder": "Nhập tin nhắn...",
+    "send": "Gửi",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "noConversation": {
+      "title": "Chọn một cuộc trò chuyện",
+      "subtitle": "Chọn cuộc trò chuyện từ bên trái để bắt đầu nhắn tin."
+    },
+    "seen": "Đã xem",
+    "delivered": "Đã gửi"
+  },
+  "Bookmarks": {
+    "title": "Đã lưu",
+    "subtitle": "Những bài viết bạn đã lưu",
+    "tabs": {
+      "posts": "Bài viết",
+      "photos": "Ảnh",
+      "videos": "Video"
+    },
+    "empty": {
+      "title": "Chưa có bài viết đã lưu",
+      "subtitle": "Lưu bài viết để đọc sau. Chúng sẽ xuất hiện ở đây."
+    },
+    "removeBookmark": "Bỏ lưu",
+    "clearAll": "Xóa tất cả"
+  },
+  "Profile": {
+    "editProfile": "Chỉnh sửa trang cá nhân",
+    "follow": "Theo dõi",
+    "following": "Đang theo dõi",
+    "message": "Nhắn tin",
+    "posts": "Bài viết",
+    "followers": "Người theo dõi",
+    "following_count": "Đang theo dõi",
+    "tabs": {
+      "posts": "Bài viết",
+      "photos": "Ảnh",
+      "likes": "Lượt thích"
+    },
+    "joinedOn": "Tham gia {date}",
+    "noPostsYet": "Chưa có bài viết nào",
+    "noBio": "Chưa có tiểu sử."
+  },
+  "Settings": {
+    "title": "Cài đặt",
+    "categories": {
+      "account": "Tài khoản",
+      "privacy": "Quyền riêng tư & An toàn",
+      "notifications": "Thông báo",
+      "appearance": "Giao diện",
+      "language": "Ngôn ngữ & Vùng"
+    },
+    "account": {
+      "title": "Cài đặt tài khoản",
+      "username": "Tên người dùng",
+      "email": "Địa chỉ email",
+      "phone": "Số điện thoại",
+      "changePassword": "Đổi mật khẩu",
+      "deleteAccount": "Xóa tài khoản",
+      "deleteWarning": "Hành động này không thể hoàn tác."
+    },
+    "privacy": {
+      "title": "Quyền riêng tư & An toàn",
+      "privateAccount": "Tài khoản riêng tư",
+      "privateAccountDesc": "Chỉ người theo dõi được chấp thuận mới thấy bài viết",
+      "showOnlineStatus": "Hiển thị trạng thái hoạt động",
+      "showOnlineStatusDesc": "Cho phép người khác thấy khi bạn đang hoạt động",
+      "readReceipts": "Xác nhận đã đọc",
+      "readReceiptsDesc": "Cho người gửi biết khi bạn đọc tin nhắn",
+      "allowTagging": "Cho phép gắn thẻ",
+      "allowTaggingDesc": "Cho phép người khác gắn thẻ bạn trong bài viết và ảnh"
+    },
+    "notifications": {
+      "title": "Cài đặt thông báo",
+      "likes": "Lượt thích",
+      "likesDesc": "Thông báo khi có người thích bài viết của bạn",
+      "comments": "Bình luận",
+      "commentsDesc": "Thông báo khi có người bình luận bài viết của bạn",
+      "follows": "Người theo dõi mới",
+      "followsDesc": "Thông báo khi có người theo dõi bạn",
+      "mentions": "Đề cập",
+      "mentionsDesc": "Thông báo khi có người đề cập đến bạn",
+      "messages": "Tin nhắn",
+      "messagesDesc": "Thông báo khi nhận tin nhắn mới",
+      "emailNotifications": "Thông báo qua email",
+      "emailNotificationsDesc": "Nhận thông báo qua email"
+    },
+    "appearance": {
+      "title": "Giao diện",
+      "theme": "Chủ đề",
+      "themeLight": "Sáng",
+      "themeDark": "Tối",
+      "themeSystem": "Hệ thống",
+      "fontSize": "Cỡ chữ",
+      "fontSizeSmall": "Nhỏ",
+      "fontSizeMedium": "Vừa",
+      "fontSizeLarge": "Lớn"
+    },
+    "language": {
+      "title": "Ngôn ngữ & Vùng",
+      "language": "Ngôn ngữ hiển thị",
+      "vietnamese": "Tiếng Việt",
+      "english": "English",
+      "timezone": "Múi giờ",
+      "dateFormat": "Định dạng ngày"
+    },
+    "save": "Lưu thay đổi",
+    "saved": "Đã lưu thay đổi!",
+    "cancel": "Hủy"
   }
 }

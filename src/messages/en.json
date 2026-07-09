@@ -83,6 +83,7 @@
       },
       "terms": "By clicking Sign Up, you agree to our <termsLink>Terms</termsLink>, <privacyLink>Privacy Policy</privacyLink> and <cookieLink>Cookies Policy</cookieLink>. You may receive SMS notifications from us and can opt out at any time.",
       "submit": "Sign up",
+      "submitting": "Creating account...",
       "alreadyHaveAccount": "Already have an account?",
       "errors": {
         "lastNameRequired": "Please enter your last name",
@@ -143,5 +144,160 @@
       "registerSuccess": "Registration successful!",
       "loginSuccess": "Login successful!"
     }
+  },
+  "Explore": {
+    "title": "Explore",
+    "searchPlaceholder": "Search Nexus",
+    "trending": "Trending topics",
+    "trendingSubtitle": "What's happening right now",
+    "suggestedUsers": "People you may know",
+    "suggestedSubtitle": "Based on your activity",
+    "follow": "Follow",
+    "following": "Following",
+    "posts": "{count} posts",
+    "explorePosts": "Explore posts",
+    "tabs": {
+      "forYou": "For You",
+      "trending": "Trending",
+      "people": "People",
+      "media": "Media"
+    }
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "tabs": {
+      "all": "All",
+      "mentions": "Mentions",
+      "likes": "Likes"
+    },
+    "empty": {
+      "title": "No notifications yet",
+      "subtitle": "When someone interacts with your posts, you'll see it here."
+    },
+    "markAllRead": "Mark all as read",
+    "types": {
+      "like": "liked your post",
+      "comment": "commented on your post",
+      "follow": "started following you",
+      "share": "shared your post",
+      "mention": "mentioned you in a post"
+    }
+  },
+  "Messages": {
+    "title": "Messages",
+    "newMessage": "New message",
+    "searchConversations": "Search conversations",
+    "online": "Online",
+    "offline": "Offline",
+    "you": "You",
+    "typingPlaceholder": "Type a message...",
+    "send": "Send",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "noConversation": {
+      "title": "Select a conversation",
+      "subtitle": "Choose a conversation from the left to start chatting."
+    },
+    "seen": "Seen",
+    "delivered": "Delivered"
+  },
+  "Bookmarks": {
+    "title": "Bookmarks",
+    "subtitle": "Posts you've saved",
+    "tabs": {
+      "posts": "Posts",
+      "photos": "Photos",
+      "videos": "Videos"
+    },
+    "empty": {
+      "title": "No bookmarks yet",
+      "subtitle": "Save posts to read them later. They'll appear here."
+    },
+    "removeBookmark": "Remove bookmark",
+    "clearAll": "Clear all"
+  },
+  "Profile": {
+    "editProfile": "Edit profile",
+    "follow": "Follow",
+    "following": "Following",
+    "message": "Message",
+    "posts": "Posts",
+    "followers": "Followers",
+    "following_count": "Following",
+    "tabs": {
+      "posts": "Posts",
+      "photos": "Photos",
+      "likes": "Likes"
+    },
+    "joinedOn": "Joined {date}",
+    "noPostsYet": "No posts yet",
+    "noBio": "No bio added yet."
+  },
+  "Settings": {
+    "title": "Settings",
+    "categories": {
+      "account": "Account",
+      "privacy": "Privacy & Safety",
+      "notifications": "Notifications",
+      "appearance": "Appearance",
+      "language": "Language & Region"
+    },
+    "account": {
+      "title": "Account Settings",
+      "username": "Username",
+      "email": "Email address",
+      "phone": "Phone number",
+      "changePassword": "Change password",
+      "deleteAccount": "Delete account",
+      "deleteWarning": "This action cannot be undone."
+    },
+    "privacy": {
+      "title": "Privacy & Safety",
+      "privateAccount": "Private account",
+      "privateAccountDesc": "Only approved followers can see your posts",
+      "showOnlineStatus": "Show online status",
+      "showOnlineStatusDesc": "Let others see when you're active",
+      "readReceipts": "Read receipts",
+      "readReceiptsDesc": "Let senders know when you've read messages",
+      "allowTagging": "Allow tagging",
+      "allowTaggingDesc": "Let others tag you in posts and photos"
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "likes": "Likes",
+      "likesDesc": "Notify when someone likes your post",
+      "comments": "Comments",
+      "commentsDesc": "Notify when someone comments on your post",
+      "follows": "New followers",
+      "followsDesc": "Notify when someone follows you",
+      "mentions": "Mentions",
+      "mentionsDesc": "Notify when someone mentions you",
+      "messages": "Messages",
+      "messagesDesc": "Notify when you receive a new message",
+      "emailNotifications": "Email notifications",
+      "emailNotificationsDesc": "Receive notifications via email"
+    },
+    "appearance": {
+      "title": "Appearance",
+      "theme": "Theme",
+      "themeLight": "Light",
+      "themeDark": "Dark",
+      "themeSystem": "System",
+      "fontSize": "Font size",
+      "fontSizeSmall": "Small",
+      "fontSizeMedium": "Medium",
+      "fontSizeLarge": "Large"
+    },
+    "language": {
+      "title": "Language & Region",
+      "language": "Display language",
+      "vietnamese": "Tiếng Việt",
+      "english": "English",
+      "timezone": "Timezone",
+      "dateFormat": "Date format"
+    },
+    "save": "Save changes",
+    "saved": "Changes saved!",
+    "cancel": "Cancel"
   }
 }

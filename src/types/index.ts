@@ -1,6 +1,6 @@
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-export type AvatarSize = "sm" | "md" | "lg";
+export type AvatarSize = "sm" | "md" | "lg" | "xl";
 
 export interface AvatarProps {
   initials: string;
@@ -54,3 +54,77 @@ export interface SuggestionItemProps {
   avatarColor: string;
   following?: boolean;
 }
+
+// ─── Notification ─────────────────────────────────────────────────────────────
+
+export type NotificationType = "like" | "comment" | "follow" | "share" | "mention";
+
+export interface Notification {
+  id: number;
+  type: NotificationType;
+  actor: {
+    name: string;
+    handle: string;
+    initials: string;
+    avatarColor: string;
+  };
+  content?: string;
+  postPreview?: string;
+  time: string;
+  read: boolean;
+}
+
+// ─── Messages ─────────────────────────────────────────────────────────────────
+
+export interface Message {
+  id: number;
+  senderId: number;
+  text: string;
+  time: string;
+  read?: boolean;
+}
+
+export interface Conversation {
+  id: number;
+  participant: {
+    name: string;
+    handle: string;
+    initials: string;
+    avatarColor: string;
+    online: boolean;
+  };
+  lastMessage: string;
+  lastTime: string;
+  unreadCount: number;
+  messages: Message[];
+}
+
+// ─── User Profile ─────────────────────────────────────────────────────────────
+
+export interface UserProfile {
+  id: number;
+  name: string;
+  handle: string;
+  initials: string;
+  avatarColor: string;
+  avatarUrl?: string;
+  bio: string;
+  location?: string;
+  website?: string;
+  joinDate: string;
+  postsCount: number;
+  followersCount: number;
+  followingCount: number;
+  coverGradient: string;
+  isFollowing: boolean;
+  isOwnProfile: boolean;
+}
+
+// ─── Settings ─────────────────────────────────────────────────────────────────
+
+export type SettingsCategory =
+  | "account"
+  | "privacy"
+  | "notifications"
+  | "appearance"
+  | "language";

@@ -30,7 +30,7 @@ const registerSchema = z.object({
   year: z.string().min(1, { message: "errors.yearRequired" }),
   gender: z
     .enum(["female", "male", "other"], {
-      errorMap: () => ({ message: "errors.genderRequired" }),
+      message: "errors.genderRequired",
     })
     .optional(),
 });
@@ -81,11 +81,11 @@ const RegistrationCard = () => {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 100 }, (_, i) => currentYear - i);
 
-  const genders = [
+  const genders: Array<{ key: "female" | "male" | "other"; label: string }> = [
     { key: "female", label: t("genders.female") },
     { key: "male", label: t("genders.male") },
     { key: "other", label: t("genders.other") },
-  ] as any;
+  ];
 
   return (
     <div className="w-full max-w-[432px]">

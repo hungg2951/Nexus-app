@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import {
   HouseIcon,
@@ -15,19 +15,20 @@ import {
 
 const MobileNav: FC = () => {
   const t = useTranslations("MobileNav");
+  const pathname = usePathname();
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 flex items-center justify-around py-3 z-30">
       <Link
         href="/"
-        className="text-violet-600 flex flex-col items-center"
+        className={`${pathname === "/" ? "text-violet-600" : "text-gray-400"} flex flex-col items-center`}
         aria-label={t("feed")}
       >
         <HouseIcon />
       </Link>
       <Link
         href="/explore"
-        className="text-gray-400 flex flex-col items-center"
+        className={`${pathname === "/explore" ? "text-violet-600" : "text-gray-400"} flex flex-col items-center`}
         aria-label={t("explore")}
       >
         <CompassIcon />
@@ -40,7 +41,7 @@ const MobileNav: FC = () => {
       </button>
       <Link
         href="/notifications"
-        className="text-gray-400 flex flex-col items-center relative"
+        className={`${pathname === "/notifications" ? "text-violet-600" : "text-gray-400"} flex flex-col items-center relative`}
         aria-label={t("notifications")}
       >
         <BellIcon />
@@ -50,7 +51,7 @@ const MobileNav: FC = () => {
       </Link>
       <Link
         href="/profile"
-        className="text-gray-400 flex flex-col items-center"
+        className={`${pathname === "/profile" ? "text-violet-600" : "text-gray-400"} flex flex-col items-center`}
         aria-label={t("profile")}
       >
         <UserIcon />

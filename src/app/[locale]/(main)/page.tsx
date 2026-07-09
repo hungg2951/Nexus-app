@@ -5,9 +5,6 @@ import type { FC } from "react";
 import { useTranslations } from "next-intl";
 import type { Post } from "@/types";
 
-import LeftSidebar from "@/components/layout/LeftSidebar";
-import RightSidebar from "@/components/layout/RightSidebar";
-import MobileNav from "@/components/nav/MobileNav";
 import FeedHeader from "@/components/header/FeedHeader";
 import PostCard from "@/components/PostCard";
 import Avatar from "@/components/Avatar";
@@ -32,7 +29,7 @@ const POSTS: Post[] = [
     content:
       "Vừa hoàn thành xong bản demo cho dự án Next.js mới. Cảm giác build mọi thứ với Tailwind CSS thật sự rất nhanh và hiệu quả! Mọi người thấy giao diện này thế nào? 🚀",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBNgsbSPpAC_pTYf3nbGGyUpksVUAzyAUmDOmuRSUvuihEaPs_g3BOMR1jMvEYp-JoFeJu7PUiR7-gqqyxCJWq2P_cVKzEmn0jfR_vxUzv5UQtW-WeNGaAqHQN_2tycHyHyAgKzHIQJ0cNsDlwVekl4ZLYRBKMfSYM8eAbRzI7XV9DaPn3WJzfCHJpjZgZRlc7-ZBsNbkqjBq6CImqlgwXor_PZAhqaOljfL8eDqV-sLxDJKVbrVIVCJPFKZdtcMO0gnZLXSRqMaUc",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
     likes: 1200,
     comments: 48,
     shares: 12,
@@ -50,6 +47,36 @@ const POSTS: Post[] = [
     likes: 245,
     comments: 15,
     liked: true,
+  },
+  {
+    id: 3,
+    initials: "ML",
+    avatarColor: "bg-indigo-500",
+    name: "Mai Lê Phương",
+    handle: "@phuong.ml",
+    time: "8 giờ trước",
+    content:
+      "Vừa đọc xong cuốn 'Atomic Habits' — thực sự thay đổi cách mình nhìn nhận về thói quen hàng ngày. Ai muốn mình review không? 📚✨",
+    likes: 876,
+    comments: 63,
+    shares: 34,
+    liked: false,
+  },
+  {
+    id: 4,
+    initials: "HT",
+    avatarColor: "bg-rose-500",
+    name: "Hoàng Thị Thu",
+    handle: "@thu.design",
+    time: "1 ngày trước",
+    content:
+      "Sản phẩm mới ra lò 🎨 Thiết kế UI cho app quản lý tài chính cá nhân. Mọi người cảm thấy thế nào về palette màu này?",
+    image:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop",
+    likes: 2100,
+    comments: 124,
+    shares: 89,
+    liked: false,
   },
 ];
 
@@ -74,70 +101,58 @@ const HomePage: FC = () => {
   }`.toUpperCase();
 
   return (
-    <div className="max-w-[1440px] mx-auto flex min-h-screen bg-white text-gray-900 font-sans antialiased pb-16 md:pb-0">
-      {/* Left Sidebar */}
-      <LeftSidebar />
+    <>
+      {/* Header with tabs */}
+      <FeedHeader activeTab={activeTab} onTabChange={setActiveTab} />
 
-      {/* Main Content */}
-      <main className="flex-1 bg-white border-r border-gray-100 min-w-0">
-        {/* Header with tabs */}
-        <FeedHeader activeTab={activeTab} onTabChange={setActiveTab} />
-
-        {/* Post Compose Box */}
-        <section className="p-4 lg:p-6 border-b border-gray-100">
-          <div className="flex gap-4">
-            <Avatar
-              initials={initials || "Unknown"}
-              size="lg"
+      {/* Post Compose Box */}
+      <section className="p-4 lg:p-6 border-b border-gray-100">
+        <div className="flex gap-4">
+          <Avatar
+            initials={initials || "U"}
+            size="lg"
+          />
+          <div className="flex-1">
+            <textarea
+              value={postText}
+              onChange={(e) => setPostText(e.target.value)}
+              className="w-full border border-gray-200 rounded-xl p-3 lg:p-4 resize-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm lg:text-base outline-none transition-all placeholder:text-gray-400"
+              placeholder={t("placeholder")}
+              rows={3}
             />
-            <div className="flex-1">
-              <textarea
-                value={postText}
-                onChange={(e) => setPostText(e.target.value)}
-                className="w-full border border-gray-200 rounded-xl p-3 lg:p-4 resize-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm lg:text-base outline-none transition-all placeholder:text-gray-400"
-                placeholder={t("placeholder")}
-                rows={3}
-              />
-              <div className="flex items-center justify-between mt-3">
-                <div className="flex gap-3 text-gray-400">
-                  {COMPOSE_ICONS.map((Icon, i) => (
-                    <button
-                      key={i}
-                      className="hover:text-pribg-primary transition-colors p-1"
-                    >
-                      <Icon />
-                    </button>
-                  ))}
-                </div>
-                <button
-                  className={`px-6 py-2 rounded-xl font-semibold text-sm transition-all active:scale-95 ${
-                    postText.trim()
-                      ? "bg-primary text-white hover:bg-primary shadow-sm shadow-violet-200"
-                      : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  }`}
-                  disabled={!postText.trim()}
-                >
-                  {t("post")}
-                </button>
+            <div className="flex items-center justify-between mt-3">
+              <div className="flex gap-3 text-gray-400">
+                {COMPOSE_ICONS.map((Icon, i) => (
+                  <button
+                    key={i}
+                    className="hover:text-primary transition-colors p-1"
+                  >
+                    <Icon />
+                  </button>
+                ))}
               </div>
+              <button
+                className={`px-6 py-2 rounded-xl font-semibold text-sm transition-all active:scale-95 ${
+                  postText.trim()
+                    ? "bg-primary text-white hover:bg-primary-hover shadow-sm shadow-violet-200"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                }`}
+                disabled={!postText.trim()}
+              >
+                {t("post")}
+              </button>
             </div>
           </div>
-        </section>
-
-        {/* Feed */}
-        <div>
-          {POSTS.map((post) => (
-            <PostCard key={post.id} post={post} />
-          ))}
         </div>
-      </main>
+      </section>
 
-      {/* Right Sidebar */}
-      <RightSidebar />
-
-      {/* Mobile Bottom Nav */}
-      <MobileNav />
-    </div>
+      {/* Feed */}
+      <div>
+        {POSTS.map((post) => (
+          <PostCard key={post.id} post={post} />
+        ))}
+      </div>
+    </>
   );
 };
 

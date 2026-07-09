@@ -1,5 +1,8 @@
+"use client";
+
 import type { FC } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/routing";
 import Avatar from "@/components/Avatar";
 import NavItem from "@/components/nav/NavItem";
 import {
@@ -18,6 +21,7 @@ import { useAuthStore } from "@/lib/store/auth.store";
 
 const LeftSidebar: FC = () => {
   const t = useTranslations("Nav");
+  const pathname = usePathname();
 
   const { user } = useAuthStore();
 
@@ -37,30 +41,44 @@ const LeftSidebar: FC = () => {
 
         {/* Nav */}
         <nav className="space-y-1">
-          <NavItem href="/" icon={<HouseIcon />} label={t("feed")} active />
+          <NavItem href="/" icon={<HouseIcon />} label={t("feed")} active={pathname === "/"} />
           <NavItem
             href="/explore"
             icon={<CompassIcon />}
             label={t("explore")}
+            active={pathname === "/explore"}
           />
           <NavItem
             href="/notifications"
             icon={<BellIcon />}
             label={t("notifications")}
             badge="4"
+            active={pathname === "/notifications"}
           />
           <NavItem
             href="/messages"
             icon={<EnvelopeIcon />}
             label={t("messages")}
+            active={pathname === "/messages"}
           />
           <NavItem
             href="/bookmarks"
             icon={<BookmarkIcon />}
             label={t("bookmarks")}
+            active={pathname === "/bookmarks"}
           />
-          <NavItem href="/profile" icon={<UserIcon />} label={t("profile")} />
-          <NavItem href="/settings" icon={<GearIcon />} label={t("settings")} />
+          <NavItem
+            href="/profile"
+            icon={<UserIcon />}
+            label={t("profile")}
+            active={pathname === "/profile"}
+          />
+          <NavItem
+            href="/settings"
+            icon={<GearIcon />}
+            label={t("settings")}
+            active={pathname === "/settings"}
+          />
         </nav>
       </div>
 

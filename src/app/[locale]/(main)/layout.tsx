@@ -1,11 +1,12 @@
 import type { FC, ReactNode } from "react";
+import MainLayout from "@/components/layout/MainLayout";
 
-interface MainLayoutProps {
+interface MainRouteLayoutProps {
   children: ReactNode;
 }
 
-const MainLayout: FC<MainLayoutProps> = ({ children }) => {
-  return <>{children}</>;
-};
+const MainRouteLayout: FC<MainRouteLayoutProps> = ({ children }) => (
+  <MainLayout>{children}</MainLayout>
+);
 
-export default MainLayout;
+export default MainRouteLayout;
